@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const token = "7102703341:AAFaE00Xyu33MPEQgkVjISeTNJvrj3NJ3WI";
-const infuraProjectId = "322c36a717e5427d96aea98c75d5fe10";
+const infuraProjectId = "Your-Infrua-Api-Key";
 const contractAddress = "0x9Fae7CB288d1DB7B968F3fD932710DEa0412Aa8B";
 
 const bot = new TelegramBot(token, { polling: true });
@@ -14,7 +14,7 @@ const contractABI = JSON.parse(fs.readFileSync(path.resolve(__dirname, './MyToke
 const contract = new web3.eth.Contract(contractABI, contractAddress);
 
 // setting up only one account for simplicity
-const senderPrivateKey = '0x8d558822e3a0f524f33affe3159cc5b7418d28133498e2ffc64fdfe0d9ed6747';
+const senderPrivateKey = 'Your-Private-Key';
 const senderAddress = web3.eth.accounts.privateKeyToAccount(senderPrivateKey).address;
 
 
